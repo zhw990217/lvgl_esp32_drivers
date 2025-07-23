@@ -1,0 +1,2 @@
+- name: Upload components
+  uses: espressif/upload-components-ci-action@v2.1.1
