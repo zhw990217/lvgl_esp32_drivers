@@ -1,0 +1,9 @@
+{
+    "idf.pythonInstallPath": "D:\\ESP32-IDF\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
+    "files.associations": {
+        "*.ttcl": "tcl",
+        "*.veo": "verilog",
+        "st7735s.h": "c",
+        "lvgl_helpers.h": "c"
+    }
+}
