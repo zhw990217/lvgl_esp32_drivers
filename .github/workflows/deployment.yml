@@ -7,8 +7,11 @@ jobs:
   upload_components:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout lvgl_esp32_drivers separately
+        uses: actions/checkout@v3
         with:
+          repository: zhw990217/lvgl_esp32_drivers
+          path: lvgl_esp32_drivers
           submodules: "recursive"
 
       - name: Upload component to the component registry
