@@ -160,11 +160,15 @@ static uint8_t displayType = HX8357D;
 void hx8357_init(void)
 {
 	//Initialize non-SPI GPIOs
-    gpio_pad_select_gpio(HX8357_DC);
+#if ESP_IDF_VERSION_MAJOR >= 5
+  esp_rom_gpio_pad_select_gpio(HX8357_DC);
+#endif
 	gpio_set_direction(HX8357_DC, GPIO_MODE_OUTPUT);
 
 #if HX8357_USE_RST
-    gpio_pad_select_gpio(HX8357_RST);
+#if ESP_IDF_VERSION_MAJOR >= 5
+  esp_rom_gpio_pad_select_gpio(HX8357_RST);
+#endif  
 	gpio_set_direction(HX8357_RST, GPIO_MODE_OUTPUT);
 
 	//Reset the display
